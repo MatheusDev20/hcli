@@ -1,0 +1,21 @@
+[package]
+name = "hc-cli"
+version = "0.1.0"
+edition = "2021"
+description = "CLI tool for bootstrapping Help Center projects"
+authors = ["Matheus DP"]
+
+[[bin]]
+name = "hcli"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.4", features = ["derive"] }
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+zip = "0.6"
+tempfile = "3.10"
+anyhow = "1.0"
+indicatif = "0.17"
+colored = "2.1"
+dialoguer = "0.11"
+serde_json = { version = "1.0", features = ["preserve_order"] }
