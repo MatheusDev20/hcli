@@ -2,7 +2,7 @@
 set -e
 
 # Configuration - UPDATE THIS with your GitHub username/repo
-REPO="YOUR_GITHUB_USERNAME/hc-cli"
+REPO="MatheusDev20/hcli"
 BINARY_NAME="hcli"
 INSTALL_DIR="${INSTALL_DIR:-/usr/local/bin}"
 
@@ -21,8 +21,7 @@ detect_os() {
     case "$(uname -s)" in
         Linux*)  echo "linux" ;;
         Darwin*) echo "macos" ;;
-        MINGW*|MSYS*|CYGWIN*) echo "windows" ;;
-        *) error "Unsupported operating system: $(uname -s)" ;;
+        *) error "Unsupported operating system: $(uname -s). Only Linux and macOS are supported." ;;
     esac
 }
 
@@ -57,11 +56,7 @@ main() {
     info "Latest version: ${VERSION}"
 
     # Construct binary name
-    if [ "$OS" = "windows" ]; then
-        ARTIFACT_NAME="${BINARY_NAME}-${OS}-${ARCH}.exe"
-    else
-        ARTIFACT_NAME="${BINARY_NAME}-${OS}-${ARCH}"
-    fi
+    ARTIFACT_NAME="${BINARY_NAME}-${OS}-${ARCH}"
 
     DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${VERSION}/${ARTIFACT_NAME}"
 
