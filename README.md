@@ -7,13 +7,13 @@ CLI tool for bootstrapping Zendesk Help Center projects based on the Copenhagen 
 ### Quick Install (Linux/macOS)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/MatheusDev20/hc-cli/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/MatheusDev20/hcli/main/install.sh | bash
 ```
 
 Or with a custom install directory:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/MatheusDev20/hc-cli/main/install.sh | INSTALL_DIR=~/.local/bin bash
+curl -fsSL https://raw.githubusercontent.com/MatheusDev20/hcli/main/install.sh | INSTALL_DIR=~/.local/bin bash
 ```3
 
 ### Manual Download
